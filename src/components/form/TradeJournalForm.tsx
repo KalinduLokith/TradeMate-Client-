@@ -126,8 +126,7 @@ const TradeJournalForm = ({
       });
       setStrategies(response.data.data);
     } catch (error) {
-      const errorMessage = "Unknown error occurred";
-      console.log(errorMessage);
+      console.log(error);
     }
   };
 
