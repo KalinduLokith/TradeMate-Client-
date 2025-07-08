@@ -15,7 +15,6 @@ export const RiskManagementView: React.FC = () => {
   const [riskPercentage, setRiskPercentage] = useState<number>(2);
   const [stopLoss, setStopLoss] = useState<number>(50);
   const [newGuideline, setNewGuideline] = useState<string>("");
-  const [takeProfit, setTakeProfit] = useState<number>(0);
   const [rrRatio, setRRRatio] = useState<number>(0);
   const [optimalTakeProfit, setOptimalTakeProfit] = useState<number>(0);
 

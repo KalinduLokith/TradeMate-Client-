@@ -73,7 +73,7 @@ const PopupView: React.FC<PopupViewProps> = ({
       label: "Close Date",
       options: {
         sort: true,
-        customBodyRender: (value: any) => (
+        customBodyRender: (value: string) => (
           <Chip
             label={new Date(value).toLocaleString()}
             style={{
@@ -90,7 +90,7 @@ const PopupView: React.FC<PopupViewProps> = ({
       label: "Status",
       options: {
         filter: true,
-        customBodyRender: (value: any) => (
+        customBodyRender: (value:string) => (
           <Chip
             label={value.toUpperCase()}
             style={{

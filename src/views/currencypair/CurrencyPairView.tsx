@@ -36,9 +36,9 @@ const CurrencyPairDialog: React.FC<DialogProps> = ({
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
-      },
+      }
     )
-      .then((response) => {
+      .then(() => {
         // console.log("Currency pair saved successfully: ", response.data);
         toast.success("Currency pair saved successfully.");
         refresh();
@@ -47,7 +47,7 @@ const CurrencyPairDialog: React.FC<DialogProps> = ({
       .catch((error) => {
         console.error("Error saving currency pair: ", error);
         toast.error(
-          error.response.data.message || "Error saving currency pair.",
+          error.response.data.message || "Error saving currency pair."
         );
         onClose();
       });
@@ -129,7 +129,7 @@ export const CurrencyPairView: React.FC = () => {
         }
       })
       .catch((error) => {
-        // console.log(error);
+        console.log(error);
         toast.error("Error deleting currency pair.");
       });
   };

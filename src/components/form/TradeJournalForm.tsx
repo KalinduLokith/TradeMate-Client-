@@ -112,6 +112,7 @@ const TradeJournalForm = ({
       });
       setCurrencies(response.data.data);
     } catch (error) {
+      console.log(error);
       toast.error("Error fetching currency pairs.");
     }
   };
@@ -124,9 +125,8 @@ const TradeJournalForm = ({
         },
       });
       setStrategies(response.data.data);
-    } catch (error: any) {
-      const errorMessage =
-        error?.response?.data?.message || "Unknown error occurred";
+    } catch (error) {
+      const errorMessage = "Unknown error occurred";
       console.log(errorMessage);
     }
   };
@@ -142,6 +142,7 @@ const TradeJournalForm = ({
       clearForm();
       onClose();
     } catch (error) {
+      console.log(error);
       toast.error("Failed to add trade.");
     }
   };
@@ -164,6 +165,7 @@ const TradeJournalForm = ({
       clearForm();
       onClose();
     } catch (error) {
+      console.log(error);
       toast.error("Failed to add trade.");
     }
   };
